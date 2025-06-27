@@ -124,7 +124,7 @@ export const cacheAndFetchAssets = ({ webExtractor, res, isBot }) => {
 
     const { routePath, preloadJSLinks } = res.locals
 
-    const linkElements = webExtractor.getLinkElements()
+    const linkElements = webExtractor.getLinkElements({ crossorigin: "anonymous" })
 
     // We want to cache/or check for update css on every call
     // We want to extract script tags for every call that will get added to body.
